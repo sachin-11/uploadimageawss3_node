@@ -63,6 +63,13 @@ const uploadToS3 = (fileData) => {
   });
 };
 
+
+//demo
+
+app.get('/demo', (req, res) => {
+  res.status(200).send('this is testing deployment route')
+})
+
 //upload single image to s3
 app.post("/upload", upload.single("image"), async (req, res) => {
   console.log(req.file);
